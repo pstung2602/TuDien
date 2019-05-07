@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+</head>
+<body>
+<input id="search"  type="text"/>
+<input onclick="trans()" type="button" value="trans"><br>
+<p id="KQ"></p>
+<script>
+    var TA=["english","banana","apple"];
+    var TV=["tiếng anh","quả chuối","quả táo"];
+    function trans() {
+        let avail = false;
+        var x=document.getElementById("search").value;
+        var y=x.toString();
+        for(i=0;i<TA.length;i++){
+            if(y===TA[i]){
+                document.getElementById("KQ").innerHTML=TV[i];
+                avail=true;
+             }
+        }
+        if(avail===false){
+            document.getElementById("KQ").innerHTML="Khong tim thay";
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
